@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.citel.citelspring.data.datasources.CandidateDatasourcesLocal;
 import com.citel.citelspring.data.datasources.JpaCandidateRepository;
-import com.citel.citelspring.data.models.candidate.CandidateModel;
+import com.citel.citelspring.data.models.CandidateModel;
 
 public class CandidateDatasourceLocalImpl implements CandidateDatasourcesLocal {
 

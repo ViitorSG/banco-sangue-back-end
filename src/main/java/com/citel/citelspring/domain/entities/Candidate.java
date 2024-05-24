@@ -13,16 +13,22 @@ public class Candidate {
     String mother;
     String father;
     String email;
-    Address address;
-    BloodType bloodType;
+    String zipCode;
+    String address;
+    int number;
+    String neighborhood;
+    String city;
+    String state;
     String landline;
     String mobile;
     double height;
     double weight;
+    String bloodType;
 
     public Candidate(int id, String name, String cpf, String rg, LocalDate birthDate, String gender,
-            String mother, String father, String email, String landline, String mobile, double height,
-            double weight, BloodType bloodType, Address address) {
+            String mother, String father, String email, String zipCode, String address, int number,
+            String neighborhood, String city, String state, String landline, String mobile, double height,
+            double weight, String bloodType) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
@@ -32,12 +38,17 @@ public class Candidate {
         this.mother = mother;
         this.father = father;
         this.email = email;
+        this.zipCode = zipCode;
+        this.address = address;
+        this.number = number;
+        this.neighborhood = neighborhood;
+        this.city = city;
+        this.state = state;
         this.landline = landline;
         this.mobile = mobile;
         this.height = height;
         this.weight = weight;
         this.bloodType = bloodType;
-        this.address = address;
     }
 
     public int getId() {
@@ -112,6 +123,54 @@ public class Candidate {
         this.email = email;
     }
 
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getNeighborhood() {
+        return neighborhood;
+    }
+
+    public void setNeighborhood(String neighborhood) {
+        this.neighborhood = neighborhood;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
     public String getLandline() {
         return landline;
     }
@@ -144,20 +203,12 @@ public class Candidate {
         this.weight = weight;
     }
 
-    public BloodType getBloodType() {
+    public String getBloodType() {
         return bloodType;
     }
 
-    public void setBloodType(BloodType bloodType) {
+    public void setBloodType(String bloodType) {
         this.bloodType = bloodType;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
     }
 
     public int getAge() {
@@ -184,8 +235,12 @@ public class Candidate {
                 ", mother=" + mother +
                 ", father=" + father +
                 ", email=" + email +
+                ", zipCode=" + zipCode +
                 ", address=" + address +
-
+                ", number=" + number +
+                ", neighborhood=" + neighborhood +
+                ", city=" + city +
+                ", state=" + state +
                 ", landline=" + landline +
                 ", mobile=" + mobile +
                 ", height=" + height +

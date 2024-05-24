@@ -3,7 +3,7 @@ package com.citel.citelspring.data.repositories;
 import java.util.List;
 
 import com.citel.citelspring.data.datasources.CandidateDatasourcesLocal;
-import com.citel.citelspring.data.models.candidate.CandidateModel;
+import com.citel.citelspring.data.models.CandidateModel;
 import com.citel.citelspring.domain.entities.Candidate;
 import com.citel.citelspring.domain.repositories.CandidateRepository;
 
@@ -27,7 +27,12 @@ public class CandidateRepositoryImpl implements CandidateRepository {
         candidate.getMother(),
         candidate.getFather(),
         candidate.getEmail(),
+        candidate.getZipCode(),
         candidate.getAddress(),
+        candidate.getNumber(),
+        candidate.getNeighborhood(),
+        candidate.getCity(),
+        candidate.getState(),
         candidate.getLandline(),
         candidate.getMobile(),
         candidate.getHeight(),

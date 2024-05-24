@@ -6,9 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.citel.citelspring.data.models.candidate.CandidateModel;
-import com.citel.citelspring.data.models.candidate.CandidateRequestModel;
-import com.citel.citelspring.data.models.candidate.CandidateResponseModel;
+import com.citel.citelspring.data.models.CandidateModel;
+import com.citel.citelspring.data.models.CandidateRequestModel;
+import com.citel.citelspring.data.models.CandidateResponseModel;
 import com.citel.citelspring.domain.usecases.candidate.CreateCandidate;
 
 public class CandidateController {

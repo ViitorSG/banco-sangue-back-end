@@ -1,14 +1,24 @@
-package com.citel.citelspring.data.models.candidate;
+package com.citel.citelspring.data.models;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import com.citel.citelspring.domain.entities.Candidate;
 
-public class CandidateRequestModel {
+@Entity
+@Table(name = "candidate")
+public class CandidateModel {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
   private String name;
   private String cpf;
@@ -30,8 +40,7 @@ public class CandidateRequestModel {
   private double weight;
   private String bloodType;
 
-  public CandidateRequestModel(int id, String name, String cpf, String rg, LocalDate birth, String gender,
-      String mother,
+  public CandidateModel(int id, String name, String cpf, String rg, LocalDate birth, String gender, String mother,
       String father, String email, String zipCode, String address, int number, String neighborhood, String city,
       String state, String landline, String mobile, double height, double weight, String bloodType) {
     this.id = id;
@@ -56,7 +65,7 @@ public class CandidateRequestModel {
     this.bloodType = bloodType;
   }
 
-  public static Candidate toCandidate(CandidateModel candidateModel) {
+  public Candidate toCandidate(CandidateModel candidateModel) {
     return new Candidate(
         candidateModel.getId(),
         candidateModel.getName(),
@@ -80,7 +89,7 @@ public class CandidateRequestModel {
         candidateModel.getBloodType());
   }
 
-  public static CandidateModel toCandidateModel(Candidate candidate) {
+  public CandidateModel toCandidateModel(Candidate candidate) {
     return new CandidateModel(
         candidate.getId(),
         candidate.getName(),
@@ -104,7 +113,7 @@ public class CandidateRequestModel {
         candidate.getBloodType());
   }
 
-  public static List<Candidate> toCandidateList(List<CandidateModel> candidateModel) {
+  public List<Candidate> toCandidateList(List<CandidateModel> candidateModel) {
     return candidateModel.stream().map(temp -> {
       return new Candidate(
           temp.getId(),
@@ -128,6 +137,9 @@ public class CandidateRequestModel {
           temp.getWeight(),
           temp.getBloodType());
     }).collect(Collectors.toList());
+  }
+
+  public CandidateModel() {
   }
 
   public int getId() {

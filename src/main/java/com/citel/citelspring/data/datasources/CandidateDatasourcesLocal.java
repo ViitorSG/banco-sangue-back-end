@@ -2,7 +2,7 @@ package com.citel.citelspring.data.datasources;
 
 import java.util.List;
 
-import com.citel.citelspring.data.models.candidate.CandidateModel;
+import com.citel.citelspring.data.models.CandidateModel;
 
 public interface CandidateDatasourcesLocal {
   public void createCandidate(CandidateModel candidateModel);
