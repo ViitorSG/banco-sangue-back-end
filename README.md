@@ -3,31 +3,12 @@
 This project was generated with SDK verion 11
 using intelij to work with java
 
-# Downloading the mvn
-To install Maven, follow these steps:
+If you want to use Visual Studio Code to run the project, you need to install this extentions:
+![image](https://github.com/ViitorSG/citel-spring/assets/89858196/93d5bfdd-ffe4-4874-84ec-29820c5b84fd)
+![image](https://github.com/ViitorSG/citel-spring/assets/89858196/72997ebe-0eae-4b5e-bdb4-c84163aad128)
+![image](https://github.com/ViitorSG/citel-spring/assets/89858196/fc82324d-3161-4f8c-87bd-83b118013da5)
+![image](https://github.com/ViitorSG/citel-spring/assets/89858196/7ea7b750-65f4-4dda-994b-ad39b260e774)
 
-Check System Requirements: Before installing Maven, ensure that your system meets the minimum requirements. Maven requires the Java Development Kit (JDK) to be installed. Make sure you have JDK installed on your machine.
-
-Download Maven: Visit the official Apache Maven website at https://maven.apache.org/download.cgi and download the latest version of Maven. Choose the binary file, typically available in zip or tar.gz format.
-
-Extract the File: After downloading, extract the file to a location of your choice on your file system.
-
-Configure Environment Variables: Add the Maven bin directory to your system's PATH. This allows you to run Maven from any directory in the terminal or command prompt.
-
-On Windows:
-Open Control Panel.
-Click on "System and Security" and then "System."
-Click on "Advanced system settings" on the left panel.
-In the System Properties window, click on "Environment Variables."
-In the "System Variables" section, find the PATH variable and click "Edit."
-Add the path to the Maven bin directory (for example, C:\path\to\apache-maven-3.8.5\bin) to the end of the PATH variable's value, separated by a semicolon.
-Click "OK" in all windows to save the changes.
-
-Verify the Installation: After installation, open a new terminal or command prompt and run the following commands to verify that Maven is installed correctly: mvn -version
-
-# Downloading the libs
-
-Run mvn clean install to dowload the libs that i used for codding
 
 # Create the DB
 
