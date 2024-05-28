@@ -85,12 +85,15 @@ public class CandidateStatsController {
         Map<String, Long> potentialDonorsCount = new HashMap<>();
         for (String recipientType : donorCompatibilityMap.keySet()) {
             long count = candidates.stream()
-                    .filter(candidate -> isEligibleDonorForRecipient(candidate.getTipo_sanguineo(), recipientType, donorCompatibilityMap))
+                    .filter(candidate ->
+                            isEligibleDonorForRecipient(candidate.getTipo_sanguineo(), recipientType, donorCompatibilityMap) &&
+                                    isEligibleDonorByAgeAndWeight(candidate))
                     .count();
             potentialDonorsCount.put(recipientType, count);
         }
         return potentialDonorsCount;
     }
+
 
     private boolean isEligibleDonorForRecipient(String donorBloodType, String recipientBloodType, Map<String, List<String>> donorCompatibilityMap) {
         return donorCompatibilityMap.get(donorBloodType).contains(recipientBloodType);
