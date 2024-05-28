@@ -1,13 +1,9 @@
-# CitelFront
+# CitelSpring
 
-This project was generated with java version 
-using webstorm to work with angular
+This project was generated with SDK verion 11
+using intelij to work with java
 
 # Downloading the libs
 
 Run npm intall to dowload the libs that i used for codding
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
