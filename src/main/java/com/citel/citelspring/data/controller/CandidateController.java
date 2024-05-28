@@ -1,7 +1,6 @@
 package com.citel.citelspring.data.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,28 +26,18 @@ public class CandidateController {
     public ResponseEntity<Void> createCandidates(@RequestPart("file") MultipartFile file) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-            // Registrar o módulo JSR-310 para lidar com LocalDate
             objectMapper.registerModule(new JavaTimeModule());
-
-            // Criar um tipo de coleção para CandidateModel
             CollectionType candidateListType = objectMapper.getTypeFactory().constructCollectionType(List.class, CandidateModel.class);
-
-            // Desserializar o arquivo para uma lista de CandidateModel
             List<CandidateModel> candidates = objectMapper.readValue(file.getBytes(), candidateListType);
-
-            // Iterar sobre os candidatos e criar cada um
             for (CandidateModel candidate : candidates) {
                 candidateRepository.createCandidate(candidate);
             }
-
             return ResponseEntity.ok().build();
         } catch (IOException e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-
-
 
     @PutMapping()
     public ResponseEntity<Void> updateCandidates(@RequestBody List<CandidateModel> candidates) {

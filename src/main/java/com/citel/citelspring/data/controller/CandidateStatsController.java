@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin
-@RequestMapping("api/v1/candidates/stats")
+@RequestMapping("api/v1/candidates/status")
 public class CandidateStatsController {
     @Autowired
     private CandidateDatasourceLocalImpl candidateRepository;
@@ -52,7 +52,7 @@ public class CandidateStatsController {
     }
 
     @GetMapping("/average-age-by-blood-type")
-    public Map<String, Double> averageAgeByBloodType() {
+    public Map<String, Double> getAverageAgeByBloodType() {
         return candidateRepository.getAllCandidates().stream()
                 .collect(Collectors.groupingBy(CandidateModel::getTipo_sanguineo,
                         Collectors.averagingInt(c -> Period.between(c.getData_nasc(), LocalDate.now()).getYears())));
