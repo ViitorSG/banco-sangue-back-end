@@ -5,8 +5,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.0</version> <!-- Atualize para uma versão mais recente -->
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>2.7.0</version>
+		<relativePath/>
 	</parent>
 	<groupId>com.citel</groupId>
 	<artifactId>citel-spring</artifactId>
@@ -14,7 +14,7 @@
 	<name>citel-spring</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>1.8</java.version> <!-- Atualize para uma versão convencional do Java -->
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 	  <dependency>
@@ -36,8 +36,8 @@
 		
 		<!-- MySQL Connector -->
 		<dependency>
-			<groupId>mysql</groupId> <!-- Alterado de com.mysql para mysql -->
-			<artifactId>mysql-connector-java</artifactId> <!-- Alterado de mysql-connector-j para mysql-connector-java -->
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		
@@ -47,7 +47,17 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope> <!-- Alterado de optional para provided -->
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+		</dependency>
+
 		<!-- Spring Boot Starter Test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

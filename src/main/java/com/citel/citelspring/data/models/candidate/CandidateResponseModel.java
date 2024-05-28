@@ -1,4 +1,4 @@
-package com.citel.citelspring.data.models;
+package com.citel.citelspring.data.models.candidate;
 
 public class CandidateResponseModel {
 

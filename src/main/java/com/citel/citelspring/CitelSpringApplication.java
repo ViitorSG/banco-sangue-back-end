@@ -10,25 +10,5 @@ public class CitelSpringApplication {
 		SpringApplication.run(CitelSpringApplication.class, args);
 	}
 
-	// @Bean
-	// BeanFactoryPostProcessor
-	// beanFactoryPostProcessor(ConfigurableApplicationContext beanRegistry) {
-	// return beanFactory -> {
-	// genericApplicationContext(
-	// (BeanDefinitionRegistry) beanRegistry.getBeanFactory());
-	// };
-	// }
 
-	// void genericApplicationContext(BeanDefinitionRegistry beanRegistry) {
-	// ClassPathBeanDefinitionScanner beanDefinitionScanner = new
-	// ClassPathBeanDefinitionScanner(beanRegistry);
-	// beanDefinitionScanner.addIncludeFilter(removeModelAndEntitiesFilter());
-	// beanDefinitionScanner.scan("com.citel");
-	// }
-
-	// static TypeFilter removeModelAndEntitiesFilter() {
-	// return (MetadataReader mr,
-	// MetadataReaderFactory mrf) ->
-	// !mr.getClassMetadata().getClassName().endsWith("Model");
-	// }
 }
