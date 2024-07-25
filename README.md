@@ -13,9 +13,9 @@ If you want to use Visual Studio Code to run the project, you need to install th
 
 # Create the DB
 
-run create database citel_software_db;
+run create database banco_sangue_db;
 
-run use citel_software_db;
+run use banco_sangue_db;
 
 run CREATE TABLE candidate (
     id INT AUTO_INCREMENT PRIMARY KEY,
